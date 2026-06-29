@@ -127,6 +127,7 @@ export default async function ServicesPage({
           heading={t('crossBorderSectionTitle')}
           body={t('crossBorderSectionBody')}
           imageAlt="Mozambique border transfer from Hluhluwe and iSwathini border shuttle service route placeholder map"
+          imageSrc="/images/tours/border-shuttle-placeholder.jpg"
           imagePlaceholderNote={t('imagePlaceholderNote')}
           ctaHref="/tours/mozambique-iswatini-border-shuttle"
           ctaLabel={t('viewRoutesAndRates')}
