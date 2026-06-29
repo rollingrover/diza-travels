@@ -65,7 +65,7 @@ export default async function AboutPage({
   const pillars = [
     { img: '/images/icons/expert-local-guides-zululand.png', alt: 'Expert local safari guides born in Zululand', title: t('pillarGuides'), desc: t('pillarGuidesDesc') },
     { img: '/images/icons/big5-wildlife-conservation-badge.png', alt: 'Big 5 wildlife conservation Hluhluwe-iMfolozi', title: t('pillarConservation'), desc: t('pillarConservationDesc') },
-    { img: '/images/icons/community-rooted-zululand-family.png', alt: 'Community-rooted tourism supporting local Zululand families', title: t('pillarCommunity'), desc: t('pillarCommunityDesc') },
+    { img: '/images/icons/icon-community-rooted-zululand-family.png', alt: 'Community-rooted tourism supporting local Zululand families', title: t('pillarCommunity'), desc: t('pillarCommunityDesc') },
     { img: '/images/icons/icon-local-partners-2.png', alt: 'Personalised safari booking service Diza Travels', title: t('pillarService'), desc: t('pillarServiceDesc') },
   ];
 
