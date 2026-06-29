@@ -259,7 +259,7 @@ export default function BookingForm() {
           rel="noopener noreferrer"
           className="font-semibold text-ochre hover:underline"
         >
-          {business.contact.phoneSecondaryDisplay}
+          {business.contact.phonePrimaryDisplay}
         </a>
       </p>
     </form>

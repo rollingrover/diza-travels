@@ -7,6 +7,13 @@ import { business } from '@/data/business';
 import { tours } from '@/data/tours';
 import Testimonials from '@/components/home/Testimonials';
 
+// Import custom PNG icons for the stats bar
+// Replace the icon imports with absolute paths from public directory
+const big5Icon = '/images/icons/icon-big5-clean.png';
+const lebomboIcon = '/images/icons/icon-lebombo-clean.png';
+const airportIcon = '/images/icons/icon-airport-shuttle.png';
+const localGuidesIcon = '/images/icons/icon-local-guides-clean.png';
+
 const SITE_URL = business.website;
 
 export function generateStaticParams() {
@@ -99,17 +106,45 @@ export default async function HomePage() {
             </div>
           </div>
 
-          {/* Stats bar */}
+          {/* Stats bar with custom PNG icons */}
           <div className="mt-14 grid max-w-2xl grid-cols-2 gap-4 rounded-2xl border border-ochre/20
                           bg-earth/60 p-6 backdrop-blur-md md:grid-cols-4">
             {[
-              { num: t('statBig5'), label: t('statBig5Label'), icon: '🦏' },
-              { num: t('statLebombo'), label: t('statLebomboLabel'), icon: '⛰️' },
-              { num: t('statShuttle'), label: t('statShuttleLabel'), icon: '🚐' },
-              { num: t('statLocal'), label: t('statLocalLabel'), icon: '🌍' },
+              { 
+                num: t('statBig5'), 
+                label: t('statBig5Label'), 
+                icon: big5Icon,
+                iconAlt: 'Big 5 safari icon' 
+              },
+              { 
+                num: t('statLebombo'), 
+                label: t('statLebomboLabel'), 
+                icon: lebomboIcon,
+                iconAlt: 'Lebombo Mountains icon' 
+              },
+              { 
+                num: t('statShuttle'), 
+                label: t('statShuttleLabel'), 
+                icon: airportIcon,
+                iconAlt: 'Airport shuttle icon' 
+              },
+              { 
+                num: t('statLocal'), 
+                label: t('statLocalLabel'), 
+                icon: localGuidesIcon,
+                iconAlt: 'Local guides icon' 
+              },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col items-center gap-1 text-center">
-                <span className="text-xl" aria-hidden="true">{stat.icon}</span>
+                <div className="w-8 h-8 relative">
+                  <Image
+                    src={stat.icon}
+                    alt={stat.iconAlt}
+                    width={32}
+                    height={32}
+                    className="w-8 h-8 object-contain"
+                  />
+                </div>
                 <span className="font-display text-xl font-semibold text-ochre-light md:text-2xl">{stat.num}</span>
                 <span className="text-[0.65rem] text-white/55">{stat.label}</span>
               </div>

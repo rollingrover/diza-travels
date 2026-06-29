@@ -5,6 +5,13 @@ import { business } from '@/data/business';
 import { buildBreadcrumbSchema } from '@/lib/schema';
 import ServiceSection from '@/components/services/ServiceSection';
 
+// Import custom PNG icons from public/images/icons/
+// Replace the icon imports with relative paths
+import safariIcon from '../../../../public/images/icons/icon-big5-clean.png';
+import airportIcon from '../../../../public/images/icons/icon-airport-shuttle.png';
+import lodgeIcon from '../../../../public/images/icons/icon-local-partners.png';
+import crossBorderIcon from '../../../../public/images/icons/icon-lebombo-clean.png';
+
 const SITE_URL = business.website;
 
 export function generateStaticParams() {
@@ -93,7 +100,12 @@ export default async function ServicesPage({
           imagePlaceholderNote={t('imagePlaceholderNote')}
           ctaHref="/tours/big-5-safari"
           ctaLabel={t('viewRoutesAndRates')}
-          badge="🦏 Big 5"
+          badgeIcon={{
+            src: safariIcon,
+            alt: 'Big 5 safari icon',
+            width: 36,
+            height: 36,
+          }}
         />
 
         {/* 2. Airport Shuttles */}
@@ -106,7 +118,12 @@ export default async function ServicesPage({
           ctaHref="/tours/airport-shuttle-king-shaka"
           ctaLabel={t('viewRoutesAndRates')}
           reverse
-          badge="✈️ DUR"
+          badgeIcon={{
+            src: airportIcon,
+            alt: 'Airport shuttle icon',
+            width: 36,
+            height: 36,
+          }}
         />
 
         {/* 3. Lodge & Hotel Shuttles */}
@@ -118,7 +135,12 @@ export default async function ServicesPage({
           imagePlaceholderNote={t('imagePlaceholderNote')}
           ctaHref="/tours/lodge-hotel-shuttle"
           ctaLabel={t('viewRoutesAndRates')}
-          badge="🏨 Lodges"
+          badgeIcon={{
+            src: lodgeIcon,
+            alt: 'Lodge shuttle icon',
+            width: 36,
+            height: 36,
+          }}
         />
 
         {/* 4. Cross-Border Shuttles — no real photo/map supplied, uses
@@ -132,7 +154,12 @@ export default async function ServicesPage({
           ctaHref="/tours/mozambique-iswatini-border-shuttle"
           ctaLabel={t('viewRoutesAndRates')}
           reverse
-          badge="🌍 Cross-Border"
+          badgeIcon={{
+            src: crossBorderIcon,
+            alt: 'Cross-border shuttle icon',
+            width: 36,
+            height: 36,
+          }}
         />
 
       </div>

@@ -39,15 +39,30 @@ export async function generateMetadata({
   };
 }
 
+// Category icon mapping with absolute paths from public directory
 const CATEGORY_ICONS: Record<string, string> = {
-  safari: '🦏',
-  hike: '⛰️',
-  shuttle: '🚐',
-  cruise: '⛵',
-  cultural: '🏡',
-  conservation: '🐘',
-  adventure: '🏍️',
-  excursion: '🐆',
+  safari: '/images/icons/icon-big5-clean.png',
+  hike: '/images/icons/icon-lebombo-clean.png',
+  shuttle: '/images/icons/icon-airport-shuttle.png',
+  cruise: '/images/icons/icon-boat-cruises.png',
+  cultural: '/images/icons/icon-community-rooted-zululand-family.png',
+  conservation: '/images/icons/big5-wildlife-conservation-badge.png',
+  adventure: '/images/icons/icon-small-groups.png',
+  excursion: '/images/icons/icon-bush-and-boat.png',
+  wildlife: '/images/icons/big5-wildlife-conservation-badge.png',  
+};
+
+// Category icon alt text mapping
+const CATEGORY_ICON_ALT: Record<string, string> = {
+  safari: 'Big 5 safari icon',
+  hike: 'Lebombo Mountains hike icon',
+  shuttle: 'Airport shuttle icon',
+  cruise: 'Boat cruise icon',
+  cultural: 'Cultural tour icon',
+  conservation: 'Conservation icon',
+  adventure: 'Adventure icon',
+  excursion: 'Excursion icon',
+  wildlife: 'Wildlife conservation icon',  
 };
 
 export default async function ToursPage({
@@ -86,6 +101,10 @@ export default async function ToursPage({
             const tag = t(`${tour.i18nKey}.tag`);
             const shortDesc = t(`${tour.i18nKey}.shortDescription`);
 
+            // Get the icon for this tour's category, fallback to safari icon if not found
+            const iconSrc = CATEGORY_ICONS[tour.category] || '/images/icons/big5-wildlife-conservation-badge.png';
+            const iconAlt = CATEGORY_ICON_ALT[tour.category] || 'Tour category icon';
+
             return (
               <Link
                 key={tour.slug}
@@ -102,13 +121,19 @@ export default async function ToursPage({
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-earth/70 via-transparent to-transparent" />
-                  <span
-                    className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-lg
-                               bg-earth/65 text-lg backdrop-blur-sm"
-                    aria-hidden="true"
-                  >
-                    {CATEGORY_ICONS[tour.category] || '🌍'}
-                  </span>
+                  
+                  {/* Category icon - using custom PNG with fallback */}
+                  <div className="absolute left-3 top-3 flex h-10 w-10 items-center justify-center rounded-lg
+                                 bg-earth/65 backdrop-blur-sm">
+                    <Image
+                      src={iconSrc}
+                      alt={iconAlt}
+                      width={22}
+                      height={22}
+                      className="w-[22px] h-[22px] object-contain"
+                    />
+                  </div>
+                  
                   {tour.isNew && (
                     <span className="absolute right-3 top-3 rounded-full bg-ochre px-3 py-1 font-ui text-xs font-bold text-earth">
                       New

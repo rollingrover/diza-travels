@@ -13,6 +13,13 @@ interface ServiceSectionProps {
   ctaLabel: string;
   reverse?: boolean;
   badge?: string;
+  /** Custom PNG icon to replace the text badge */
+  badgeIcon?: {
+    src: string | any;
+    alt: string;
+    width?: number;
+    height?: number;
+  };
 }
 
 /**
@@ -33,6 +40,7 @@ export default function ServiceSection({
   ctaLabel,
   reverse = false,
   badge,
+  badgeIcon,
 }: ServiceSectionProps) {
   return (
     <article
@@ -62,11 +70,24 @@ export default function ServiceSection({
             <p className="max-w-xs font-ui text-sm text-white/60">{imagePlaceholderNote}</p>
           </div>
         )}
-        {badge && (
-          <span className="absolute left-4 top-4 rounded-full bg-ochre px-3 py-1 font-ui text-xs font-bold uppercase tracking-wide text-earth">
-            {badge}
-          </span>
-        )}
+        {/* Badge — icon OR text, with icon taking priority */}
+        <div className="absolute left-4 top-4">
+          {badgeIcon ? (
+            <div className="rounded-full bg-white/90 p-2 shadow-md backdrop-blur-sm">
+              <Image
+                src={badgeIcon.src}
+                alt={badgeIcon.alt}
+                width={badgeIcon.width || 36}
+                height={badgeIcon.height || 36}
+                className="w-9 h-9 object-contain"
+              />
+            </div>
+          ) : badge ? (
+            <span className="rounded-full bg-ochre px-3 py-1 font-ui text-xs font-bold uppercase tracking-wide text-earth">
+              {badge}
+            </span>
+          ) : null}
+        </div>
       </div>
 
       {/* Content */}
