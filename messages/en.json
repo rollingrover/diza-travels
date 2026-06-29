@@ -65,6 +65,11 @@
     "lodgeSectionBody": "A dependable lodge shuttle service Zululand travellers trust — connecting hotels, lodges and game reserves across the region.",
     "crossBorderSectionTitle": "Cross-Border Shuttles",
     "crossBorderSectionBody": "Specialised Mozambique border transfer from Hluhluwe services to Kosi Bay and Ponta do Ouro, plus our iSwathini border shuttle service for onward Southern Africa travel.",
+    "homesteadSectionTitle": "Homestead Stay — Authentic Zulu Cultural Immersion",
+    "homesteadSectionBody": "Experience genuine Zulu hospitality with a stay at a traditional homestead. Immerse yourself in the rich culture and daily life of local isiZulu communities. Share meals, listen to ancestral stories around the fire, learn about traditional crafts, and connect with the warm-hearted people of Zululand. A truly unforgettable cultural exchange that supports local communities and preserves heritage.",
+    "homesteadPlaceholderNote": "🏡 Authentic Zulu homestead — cultural immersion with local community",
+    "quadSectionTitle": "Quad Bike Adventure — Explore Zululand's Terrain",
+    "quadSectionBody": "Discover the rugged beauty of Zululand on an exhilarating quad bike adventure. Guided by experienced local rangers, traverse scenic trails through bushveld, coastal forests, and open plains. Perfect for thrill-seekers and nature lovers — all skill levels welcome with full safety briefings and equipment provided.",
     "imagePlaceholderNote": "Photo coming soon — contact us for current route maps and vehicle photos.",
     "viewRoutesAndRates": "View Routes & Rates"
   },
@@ -154,6 +159,12 @@
       "tag": "Cheetah · Elephant · River · Croc · Gin · Beer",
       "shortDescription": "A curated menu of add-on excursions to build your perfect Zululand day.",
       "description": "Build your perfect Zululand day from our menu of curated excursions: get up close on a Cheetah Visit, enjoy an unforgettable Elephant Interaction, relax on a scenic River Cruise, marvel at ancient reptiles on a Crocodile Farm tour, sample local spirits at a Gin Distillery, or sip on a Beer Tasting tour. Mix and match to build a custom day — ask us for a tailored quote."
+    },
+    "homestead": {
+      "name": "Homestead Stay — Zulu Cultural Immersion",
+      "tag": "Cultural Homestay · Hluhluwe",
+      "shortDescription": "Authentic Zulu homestead stay — share meals, stories and daily life with a local community.",
+      "description": "Experience genuine Zulu hospitality with a stay at a traditional homestead. Immerse yourself in the rich culture and daily life of local isiZulu communities. Share meals, listen to ancestral stories around the fire, learn about traditional crafts, and connect with the warm-hearted people of Zululand. A truly unforgettable cultural exchange that supports local communities and preserves heritage."
     }
   },
   "Pricing": {
@@ -257,6 +268,7 @@
     "serviceCulturalTour": "KwaSmolo Cultural Tour",
     "serviceTembeConservation": "Tembe Conservation Experience",
     "serviceQuadBiking": "Quad Bike Adventure",
+    "serviceHomestead": "Homestead Stay — Cultural Immersion",
     "serviceOther": "Other / Not Sure Yet",
     "submitButton": "Send Booking Request",
     "submitting": "Opening your email app…",

@@ -245,6 +245,26 @@ export const tours: Tour[] = [
     ],
     fromPriceZAR: 100,
   },
+  {
+  slug: 'homestead-stay',
+  i18nKey: 'homestead',
+  category: 'cultural',
+  image: '/images/tours/homestead-placeholder.jpg',
+  imageAlt: 'Authentic Zulu homestead stay experience — guests with local community in Hluhluwe',
+  gallery: [
+    '/images/tours/homestead-1.jpg',
+    '/images/tours/homestead-2.jpg',
+  ],
+  rates: [
+    { duration: 'Overnight stay', priceZAR: 0, unit: 'person' },
+    { duration: '2 nights', priceZAR: 0, unit: 'person' },
+  ],
+  fromPriceZAR: 0,
+  durationHours: 24,
+  requiresAdvanceBooking: true,
+  minAdvanceDays: 3,
+  minPax: 2,
+},
 ];
 
 export function getTourBySlug(slug: string): Tour | undefined {

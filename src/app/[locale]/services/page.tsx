@@ -6,11 +6,12 @@ import { buildBreadcrumbSchema } from '@/lib/schema';
 import ServiceSection from '@/components/services/ServiceSection';
 
 // Import custom PNG icons from public/images/icons/
-// Replace the icon imports with relative paths
 import safariIcon from '../../../../public/images/icons/icon-big5-clean.png';
 import airportIcon from '../../../../public/images/icons/icon-airport-shuttle.png';
 import lodgeIcon from '../../../../public/images/icons/icon-local-partners.png';
 import crossBorderIcon from '../../../../public/images/icons/icon-lebombo-clean.png';
+import homesteadIcon from '../../../../public/images/icons/icon-community-rooted-zululand-family.png';
+import quadIcon from '../../../../public/images/icons/icon-small-groups.png';
 
 const SITE_URL = business.website;
 
@@ -88,7 +89,7 @@ export default async function ServicesPage({
         </p>
       </header>
 
-      {/* Four dedicated keyword sections */}
+      {/* Six service sections */}
       <div className="mx-auto flex max-w-content flex-col gap-8 px-6 py-16 md:py-24">
 
         {/* 1. Game Drives & Safari Drives */}
@@ -157,6 +158,41 @@ export default async function ServicesPage({
           badgeIcon={{
             src: crossBorderIcon,
             alt: 'Cross-border shuttle icon',
+            width: 36,
+            height: 36,
+          }}
+        />
+
+        {/* 5. Homestead Stay — NEW: Cultural immersion experience */}
+        <ServiceSection
+          heading={t('homesteadSectionTitle')}
+          body={t('homesteadSectionBody')}
+          imageAlt="Zulu homestead experience — guests staying with local isiZulu community in their traditional homestead"
+          imageSrc="/images/tours/homestead-placeholder.jpg"
+          imagePlaceholderNote={t('homesteadPlaceholderNote') || '🏡 Homestead Stay — authentic Zulu cultural immersion experience placeholder'}
+          ctaHref="/tours/homestead-stay"
+          ctaLabel={t('viewRoutesAndRates')}
+          reverse
+          badgeIcon={{
+            src: homesteadIcon,
+            alt: 'Homestead stay icon',
+            width: 36,
+            height: 36,
+          }}
+        />
+
+        {/* 6. Quad Bike Adventure — NEW: Off-road adventure */}
+        <ServiceSection
+          heading={t('quadSectionTitle')}
+          body={t('quadSectionBody')}
+          imageAlt="Quad bike adventure — guests riding quad bikes on a guided off-road tour near Hluhluwe"
+          imageSrc="/images/tours/quad-hero.jpg"
+          imagePlaceholderNote={t('imagePlaceholderNote')}
+          ctaHref="/tours/quad-bike-adventure"
+          ctaLabel={t('viewRoutesAndRates')}
+          badgeIcon={{
+            src: quadIcon,
+            alt: 'Quad bike adventure icon',
             width: 36,
             height: 36,
           }}
