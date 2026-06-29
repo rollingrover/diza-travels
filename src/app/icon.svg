@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <radialGradient id="shieldGradient" cx="45%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFD24A"/>
+      <stop offset="45%" stop-color="#E8A84A"/>
+      <stop offset="100%" stop-color="#C4862A"/>
+    </radialGradient>
+  </defs>
+  <!-- Crossed spears -->
+  <path d="M10 6 L22 22 M38 6 L26 22" stroke="#3D2810" stroke-width="2" stroke-linecap="round"/>
+  <path d="M10 42 L22 26 M38 42 L26 26" stroke="#3D2810" stroke-width="2" stroke-linecap="round"/>
+  <!-- Shield outline -->
+  <ellipse cx="24" cy="24" rx="13" ry="19" fill="#1A1208"/>
+  <ellipse cx="24" cy="24" rx="11" ry="17" fill="url(#shieldGradient)"/>
+  <!-- Africa silhouette (simplified) -->
+  <path
+    d="M24 14
+       c1.8 0 3 1.4 3.6 2.6
+       c0.8 1.6 0.6 3 1.6 4
+       c1.2 1.2 2 1.6 1.8 3.2
+       c-0.2 1.6 -1.6 2 -1.4 3.6
+       c0.2 1.6 1.4 2.2 1 3.8
+       c-0.4 1.6 -2 2.2 -2.6 3.6
+       c-0.5 1.2 -0.2 2.4 -1.2 3
+       c-1 0.6 -2.2 -0.2 -3 -1.2
+       c-0.8 -1 -0.6 -2.2 -1.6 -2.8
+       c-1.2 -0.7 -2.4 0 -3.2 -1.2
+       c-0.7 -1.1 0 -2.3 -0.6 -3.4
+       c-0.7 -1.3 -2.2 -1.3 -2.6 -2.8
+       c-0.4 -1.4 0.7 -2.3 0.8 -3.6
+       c0.1 -1.3 -0.8 -2.1 -0.3 -3.4
+       c0.5 -1.3 2 -1.4 2.8 -2.5
+       c0.9 -1.2 0.6 -2.7 1.9 -3.5
+       c1 -0.6 2.1 -0.2 3 -0.4
+       Z"
+    fill="#1A1208"
+  />
+</svg>
