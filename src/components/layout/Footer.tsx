@@ -26,14 +26,28 @@ export default async function Footer() {
     { label: tNav('contact'), href: '/contact' },
   ];
 
-  // Social icons — all hrefs set to "#" per spec except real existing
-  // Facebook/Instagram/WhatsApp links already confirmed; TripAdvisor has
-  // no confirmed listing yet so stays "#" until supplied.
+  // Social icons with real URLs from dizatravels.co.za
   const socialIcons = [
-    { label: 'Facebook',    href: '#', Icon: FaFacebookF },
-    { label: 'Instagram',   href: '#', Icon: FaInstagram },
-    { label: 'WhatsApp',    href: '#', Icon: FaWhatsapp },
-    { label: 'TripAdvisor', href: '#', Icon: FaTripadvisor },
+    { 
+      label: 'Facebook', 
+      href: 'https://www.facebook.com/christopher.manqele.50', 
+      Icon: FaFacebookF 
+    },
+    { 
+      label: 'Instagram', 
+      href: 'https://www.instagram.com/dizatravels/', 
+      Icon: FaInstagram 
+    },
+    { 
+      label: 'WhatsApp', 
+      href: 'https://wa.me/27695620240', 
+      Icon: FaWhatsapp 
+    },
+    { 
+      label: 'TripAdvisor', 
+      href: 'https://www.tripadvisor.com/Attraction_Review-g469408-d27726530-Reviews-Diza_Travels-Hluhluwe_KwaZulu_Natal.html', 
+      Icon: FaTripadvisor 
+    },
   ];
 
   return (
@@ -74,12 +88,14 @@ export default async function Footer() {
               <span className="text-white/65">📍 {business.address.officeName}</span>
             </div>
 
-            {/* Social icons — react-icons, hover effects, href="#" placeholders */}
+            {/* Social icons */}
             <div className="flex gap-2.5">
               {socialIcons.map(({ label, href, Icon }) => (
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15
                              text-white/65 transition-all duration-200 hover:-translate-y-0.5 hover:border-ochre
