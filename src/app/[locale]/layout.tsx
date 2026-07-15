@@ -92,23 +92,19 @@ export default async function LocaleLayout({
   const localBusinessSchema = buildLocalBusinessSchema(locale as Locale);
 
   return (
-    <html lang={locale}>
-      <body>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencySchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <WhatsAppFloat />
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencySchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
+      <WhatsAppFloat />
+    </NextIntlClientProvider>
   );
 }

@@ -14,7 +14,6 @@ export default function RootLayout({
       </head>
       <body>
         {children}
-        {/* Vercel Analytics — tracks page views automatically */}
         <Analytics />
       </body>
     </html>

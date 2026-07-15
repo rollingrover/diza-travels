@@ -140,9 +140,9 @@ export default function GalleryGrid({ altTexts }: GalleryGridProps) {
             </p>
             {/* Dot indicator */}
             <div className="flex gap-1.5" aria-hidden="true">
-              {galleryPhotos.map((_, i) => (
+              {galleryPhotos.map((photo, i) => (
                 <button
-                  key={i}
+                  key={photo.src}   // ← Only change: stable key
                   type="button"
                   onClick={() => setLightboxIndex(i)}
                   className={`h-1.5 rounded-full transition-all ${
