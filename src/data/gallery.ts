@@ -62,7 +62,6 @@ export const galleryPhotos: GalleryPhoto[] = [
   // ── New Facebook group photos (June 2026) ──
   { src: '/images/gallery/elephant-herd-waterhole-hluhluwe-imfolozi.jpg', altKey: 'elephantHerdWaterhole', span: 'wide', isReal: true },
   { src: '/images/gallery/male-lions-road-hluhluwe-imfolozi.jpg',         altKey: 'maleLionsRoad',        span: 'tall', isReal: true },
-  { src: '/images/gallery/kwasmolo-school-community-visit.jpg',           altKey: 'kwasmoloSchoolVisit',  span: '',     isReal: true },
   { src: '/images/gallery/diza-travels-guests-elephant-connections.jpg',  altKey: 'guestsElephantConnections', span: '', isReal: true },
   { src: '/images/gallery/diza-travels-hiace-shuttle-kzn.jpg',            altKey: 'hiaceShuttleKzn',      span: 'wide', isReal: true },
   { src: '/images/gallery/nyala-female-bushveld-hluhluwe.jpg',            altKey: 'nyalaFemaleBushveld',  span: '',     isReal: true },

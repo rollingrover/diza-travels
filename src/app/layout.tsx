@@ -1,10 +1,18 @@
-// app/layout.tsx
 import './globals.css';
+import { Analytics } from '@vercel/analytics/next';
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children; // ← NO html, NO body tags here!
+  return (
+    <html lang="en">
+      <body>
+        {children}
+        {/* Vercel Analytics — tracks page views automatically */}
+        <Analytics />
+        </body>
+    </html>
+  );
 }
