@@ -173,12 +173,11 @@ export const tours: Tour[] = [
     slug: 'kwasmolo-cultural-tour',
     i18nKey: 'cultural',
     category: 'cultural',
-    image: '/images/tours/cultural-hero.jpg',
+    image: '/images/tours/cultural-1.jpg',
     imageAlt: 'Zulu dancers performing traditional dance for visitors in KwaSmolo community',
     gallery: [
       '/images/tours/cultural-1.jpg',
-      '/images/tours/cultural-2.jpg',
-      '/images/tours/cultural-3.jpg',
+      '/images/tours/cultural-2.jpg',      
     ],
     rates: [
       { duration: 'Half day', priceZAR: 500, unit: 'person', ageGroup: 'adult' },
