@@ -64,7 +64,7 @@ export const business = {
    * Per final audit: all hrefs as provided, vertical list in footer.
    */
   partners: [
-    { name: 'Diza Kwa Smolo', href: 'https://www.dizakwasmolo.co.za' },
+    { name: 'Diza Kwa-Smolo Community Uplifting Initiative', href: 'https://www.dizakwasmolo.co.za' },
     { name: 'Zatours', href: 'https://zatours.co.za' },
     { name: 'Mzamo Cultural Village & Homestead', href: 'https://www.mzamovillagehomestead.co.za' },
     { name: 'eThlathini Rest Camp', href: 'https://www.ethlathini.co.za' },
