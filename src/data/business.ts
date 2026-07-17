@@ -73,7 +73,7 @@ export const business = {
 
   credit: {
     label: 'Web Design by RollingRover Productions',
-    href: '#',
+    href: 'https://www.rollingrover.co.za',
   },
 
   website: 'https://www.dizatravels.co.za',
