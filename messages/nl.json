@@ -66,7 +66,12 @@
     "crossBorderSectionTitle": "Grensoverschrijdende Shuttles",
     "crossBorderSectionBody": "Gespecialiseerde Mozambique grenstransfer vanuit Hluhluwe diensten naar Kosi Bay en Ponta do Ouro, plus onze iSwathini grensoverschrijdende shuttledienst voor verdere reizen door zuidelijk Afrika.",
     "imagePlaceholderNote": "Foto volgt binnenkort — neem contact met ons op voor actuele routekaarten en voertuigfoto's.",
-    "viewRoutesAndRates": "Bekijk Routes & Tarieven"
+    "viewRoutesAndRates": "Bekijk Routes & Tarieven",
+    "homesteadSectionTitle": "Homestead-verblijf — Authentieke Zoeloe Culturele Onderdompeling",
+    "homesteadSectionBody": "Beleef echte Zoeloe gastvrijheid tijdens een verblijf in een traditioneel homestead. Dompel jezelf onder in de rijke cultuur en het dagelijks leven van lokale isiZulu-gemeenschappen. Deel maaltijden, luister naar verhalen van voorouders bij het vuur, leer over traditioneel handwerk en maak kennis met de warme mensen van Zululand. Een werkelijk onvergetelijke culturele uitwisseling die lokale gemeenschappen ondersteunt en erfgoed behoudt.",
+    "homesteadPlaceholderNote": "🏡 Authentiek Zoeloe homestead — culturele onderdompeling met de lokale gemeenschap",
+    "quadSectionTitle": "Quad Bike-avontuur — Verken het Terrein van Zululand",
+    "quadSectionBody": "Ontdek de ruige schoonheid van Zululand tijdens een spannend quad bike-avontuur. Onder begeleiding van ervaren lokale rangers doorkruis je schilderachtige paden door bushveld, kustbossen en open vlaktes. Perfect voor avontuurlijke en natuurliefhebbers — alle niveaus welkom, met volledige veiligheidsbriefing en uitrusting inbegrepen."
   },
   "Tours": {
     "pageTitle": "Tours & Ervaringen",
@@ -154,6 +159,12 @@
       "tag": "Cheetah · Olifant · Rivier · Krokodil · Gin · Bier",
       "shortDescription": "Een samengesteld menu van extra excursies om jouw perfecte Zululand-dag samen te stellen.",
       "description": "Stel jouw perfecte Zululand-dag samen vanuit ons menu van zorgvuldig samengestelde excursies: kom dichtbij een cheetah tijdens een bezoek, geniet van een onvergetelijke olifantinteractie, ontspan tijdens een schilderachtige riviervaart, sta versteld van oude reptielen tijdens een krokodillenfarm-tour, proef lokale gedistilleerde dranken tijdens een gin-distilleerderijtour, of geniet van een bierproeverij. Combineer naar wens voor een dag op maat — vraag ons naar een offerte op maat."
+    },
+    "homestead": {
+      "name": "Homestead-verblijf — Zoeloe Culturele Onderdompeling",
+      "tag": "Cultureel Verblijf · Hluhluwe",
+      "shortDescription": "Authentiek Zoeloe homestead-verblijf — deel maaltijden, verhalen en het dagelijks leven met een lokale gemeenschap.",
+      "description": "Beleef echte Zoeloe gastvrijheid tijdens een verblijf in een traditioneel homestead. Dompel jezelf onder in de rijke cultuur en het dagelijks leven van lokale isiZulu-gemeenschappen. Deel maaltijden, luister naar verhalen van voorouders bij het vuur, leer over traditioneel handwerk en maak kennis met de warme mensen van Zululand. Een werkelijk onvergetelijke culturele uitwisseling die lokale gemeenschappen ondersteunt en erfgoed behoudt."
     }
   },
   "Pricing": {
@@ -270,7 +281,8 @@
     "errorService": "Selecteer een dienst.",
     "errorDate": "Geef een gewenste datum op, of schrijf \"Flexibel\".",
     "errorPax": "Voer een geldig aantal gasten in (1–100).",
-    "whatsappAlternative": "Liever direct chatten? Neem rechtstreeks contact op via WhatsApp."
+    "whatsappAlternative": "Liever direct chatten? Neem rechtstreeks contact op via WhatsApp.",
+    "serviceHomestead": "Homestead-verblijf — Culturele Onderdompeling"
   },
   "Contact": {
     "pageTitle": "Begin Jouw Zululand-Reis",

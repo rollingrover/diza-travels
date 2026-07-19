@@ -66,7 +66,12 @@
     "crossBorderSectionTitle": "Grenzüberschreitende Shuttles",
     "crossBorderSectionBody": "Spezialisierte Mosambik-Grenztransfer ab Hluhluwe Services nach Kosi Bay und Ponta do Ouro, sowie unser iSwathini-Grenz-Shuttle-Service für die Weiterreise im südlichen Afrika.",
     "imagePlaceholderNote": "Foto folgt in Kürze — kontaktiere uns für aktuelle Routenkarten und Fahrzeugfotos.",
-    "viewRoutesAndRates": "Routen & Preise ansehen"
+    "viewRoutesAndRates": "Routen & Preise ansehen",
+    "homesteadSectionTitle": "Homestead-Aufenthalt — Authentisches Zulu-Kulturerlebnis",
+    "homesteadSectionBody": "Erleben Sie echte Zulu-Gastfreundschaft bei einem Aufenthalt in einem traditionellen Homestead. Tauchen Sie ein in die reiche Kultur und den Alltag lokaler isiZulu-Gemeinschaften. Teilen Sie Mahlzeiten, lauschen Sie überlieferten Geschichten am Lagerfeuer, lernen Sie traditionelles Handwerk kennen und begegnen Sie den herzlichen Menschen von Zululand. Ein wahrhaft unvergesslicher kultureller Austausch, der lokale Gemeinschaften unterstützt und ihr Erbe bewahrt.",
+    "homesteadPlaceholderNote": "🏡 Authentisches Zulu-Homestead — kulturelles Eintauchen mit der lokalen Gemeinschaft",
+    "quadSectionTitle": "Quad-Bike-Abenteuer — Entdecken Sie das Gelände von Zululand",
+    "quadSectionBody": "Entdecken Sie die raue Schönheit von Zululand bei einem aufregenden Quad-Bike-Abenteuer. Geführt von erfahrenen lokalen Rangern, durchqueren Sie malerische Pfade durch Buschland, Küstenwälder und offene Ebenen. Perfekt für Abenteuerlustige und Naturliebhaber — alle Erfahrungsstufen willkommen, mit vollständiger Sicherheitseinweisung und gestellter Ausrüstung."
   },
   "Tours": {
     "pageTitle": "Touren & Erlebnisse",
@@ -154,6 +159,12 @@
       "tag": "Gepard · Elefant · Fluss · Krokodil · Gin · Bier",
       "shortDescription": "Ein kuratiertes Menü an Zusatzausflügen für deinen perfekten Tag in Zululand.",
       "description": "Gestalte deinen perfekten Tag in Zululand aus unserem Menü kuratierter Ausflüge: komm einem Geparden ganz nah, erlebe eine unvergessliche Elefanten-Begegnung, entspanne bei einer malerischen Flussfahrt, bestaune uralte Reptilien bei einer Krokodilfarm-Tour, probiere lokale Spirituosen bei einer Gin-Destillerie-Tour oder genieße eine Bierverkostung. Kombiniere nach Belieben für einen individuellen Tag — frag uns nach einem maßgeschneiderten Angebot."
+    },
+    "homestead": {
+      "name": "Homestead-Aufenthalt — Zulu-Kulturelles Eintauchen",
+      "tag": "Kultureller Aufenthalt · Hluhluwe",
+      "shortDescription": "Authentischer Zulu-Homestead-Aufenthalt — teilen Sie Mahlzeiten, Geschichten und den Alltag mit einer lokalen Gemeinschaft.",
+      "description": "Erleben Sie echte Zulu-Gastfreundschaft bei einem Aufenthalt in einem traditionellen Homestead. Tauchen Sie ein in die reiche Kultur und den Alltag lokaler isiZulu-Gemeinschaften. Teilen Sie Mahlzeiten, lauschen Sie überlieferten Geschichten am Lagerfeuer, lernen Sie traditionelles Handwerk kennen und begegnen Sie den herzlichen Menschen von Zululand. Ein wahrhaft unvergesslicher kultureller Austausch, der lokale Gemeinschaften unterstützt und ihr Erbe bewahrt."
     }
   },
   "Pricing": {
@@ -270,7 +281,8 @@
     "errorService": "Bitte wähle eine Leistung aus.",
     "errorDate": "Bitte gib einen Wunschtermin an oder schreibe „flexibel“.",
     "errorPax": "Bitte gib eine gültige Gästeanzahl ein (1–100).",
-    "whatsappAlternative": "Lieber sofort chatten? Schreib uns direkt per WhatsApp."
+    "whatsappAlternative": "Lieber sofort chatten? Schreib uns direkt per WhatsApp.",
+    "serviceHomestead": "Homestead-Aufenthalt — Kulturelles Eintauchen"
   },
   "Contact": {
     "pageTitle": "Beginne deine Zululand-Reise",

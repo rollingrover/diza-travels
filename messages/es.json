@@ -66,7 +66,12 @@
     "crossBorderSectionTitle": "Traslados Transfronterizos",
     "crossBorderSectionBody": "Servicios especializados de traslado fronterizo a Mozambique desde Hluhluwe hacia Kosi Bay y Ponta do Ouro, además de nuestro servicio de traslado a la frontera de iSwatini para continuar el viaje por el sur de África.",
     "imagePlaceholderNote": "Foto próximamente — contáctanos para mapas de rutas y fotos de vehículos actuales.",
-    "viewRoutesAndRates": "Ver Rutas y Tarifas"
+    "viewRoutesAndRates": "Ver Rutas y Tarifas",
+    "homesteadSectionTitle": "Estancia en Homestead — Auténtica Inmersión Cultural Zulú",
+    "homesteadSectionBody": "Viva la genuina hospitalidad zulú con una estancia en un homestead tradicional. Sumérjase en la rica cultura y la vida cotidiana de las comunidades isiZulu locales. Comparta comidas, escuche historias ancestrales junto al fuego, aprenda sobre artesanía tradicional y conecte con la cálida gente de Zululandia. Un intercambio cultural verdaderamente inolvidable que apoya a las comunidades locales y preserva su patrimonio.",
+    "homesteadPlaceholderNote": "🏡 Auténtico homestead zulú — inmersión cultural con la comunidad local",
+    "quadSectionTitle": "Aventura en Cuatriciclo — Explore el Terreno de Zululandia",
+    "quadSectionBody": "Descubra la belleza salvaje de Zululandia en una emocionante aventura en cuatriciclo. Guiado por guardas locales experimentados, recorra senderos escénicos a través del bushveld, bosques costeros y llanuras abiertas. Perfecto para amantes de la aventura y la naturaleza — todos los niveles son bienvenidos, con briefing de seguridad completo y equipo incluido."
   },
   "Tours": {
     "pageTitle": "Tours y Experiencias",
@@ -154,6 +159,12 @@
       "tag": "Guepardo · Elefante · Río · Cocodrilo · Ginebra · Cerveza",
       "shortDescription": "Un menú seleccionado de excursiones adicionales para construir tu día perfecto en Zululandia.",
       "description": "Construye tu día perfecto en Zululandia con nuestro menú de excursiones seleccionadas: acércate a un guepardo en una visita, disfruta de una inolvidable interacción con elefantes, relájate en un pintoresco crucero fluvial, maravíllate con antiguos reptiles en un tour por una granja de cocodrilos, prueba licores locales en un tour por una destilería de ginebra, o disfruta de una cata de cervezas. Combina a tu gusto para crear un día personalizado — pídenos un presupuesto a medida."
+    },
+    "homestead": {
+      "name": "Estancia en Homestead — Inmersión Cultural Zulú",
+      "tag": "Estancia Cultural · Hluhluwe",
+      "shortDescription": "Auténtica estancia en un homestead zulú — comparta comidas, historias y la vida diaria con una comunidad local.",
+      "description": "Viva la genuina hospitalidad zulú con una estancia en un homestead tradicional. Sumérjase en la rica cultura y la vida cotidiana de las comunidades isiZulu locales. Comparta comidas, escuche historias ancestrales junto al fuego, aprenda sobre artesanía tradicional y conecte con la cálida gente de Zululandia. Un intercambio cultural verdaderamente inolvidable que apoya a las comunidades locales y preserva su patrimonio."
     }
   },
   "Pricing": {
@@ -270,7 +281,8 @@
     "errorService": "Por favor selecciona un servicio.",
     "errorDate": "Por favor indica una fecha preferida, o escribe \"Flexible\".",
     "errorPax": "Por favor ingresa un número válido de huéspedes (1–100).",
-    "whatsappAlternative": "¿Prefieres chatear al instante? Contáctanos directamente por WhatsApp."
+    "whatsappAlternative": "¿Prefieres chatear al instante? Contáctanos directamente por WhatsApp.",
+    "serviceHomestead": "Estancia en Homestead — Inmersión Cultural"
   },
   "Contact": {
     "pageTitle": "Comienza tu Viaje por Zululandia",

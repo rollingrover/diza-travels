@@ -66,7 +66,12 @@
     "crossBorderSectionTitle": "Ukuthutha Okuwela Imingcele",
     "crossBorderSectionBody": "Izinsizakalo ezikhethekile zokuthuthwa komngcele wase-Mozambiki kusukela eHluhluwe kuya eKosi Bay nase-Ponta do Ouro, kanye nenkonzo yethu yokuwela umngcele wase-iSwathini ukuze uqhubeke nohambo lwakho eNingizimu Afrika.",
     "imagePlaceholderNote": "Isithombe sizofika maduzane — xhumana nathi ukuze uthole amamephu ezindlela kanye nezithombe zezimoto zamanje.",
-    "viewRoutesAndRates": "Bona Izindlela Namanani"
+    "viewRoutesAndRates": "Bona Izindlela Namanani",
+    "homesteadSectionTitle": "Ukuhlala Ekhaya — Ukuzibandakanya Namasiko AmaZulu Okuyiqiniso",
+    "homesteadSectionBody": "Zwakalisa ubungani beqiniso besiZulu ngokuhlala ekhaya lendabuko. Zicwilise emasikweni acebile nasempilweni yansuku zonke yemiphakathi yesiZulu yendawo. Yabelana ngokudla, ulalele izindaba zokhokho emlilweni, ufunde ngobuciko bendabuko, futhi uxhumane nabantu abamnene baseZululand. Ukuxhumana kwesiko okungeke ukhohlwe okusekela imiphakathi yendawo futhi kugcine amagugu.",
+    "homesteadPlaceholderNote": "🏡 Ikhaya lesiZulu lokoqobo — ukuzibandakanya namasiko nomphakathi wendawo",
+    "quadSectionTitle": "Uhambo Lwe-Quad Bike — Hlola Umhlaba WaseZululand",
+    "quadSectionBody": "Thola ubuhle obuhlaza baseZululand ohambweni oluvusa amadlingozi lwe-quad bike. Uholwa ngabalindisi bendawo abanolwazi, uhambe izindlela ezinhle ezidabula ihlathi, amahlathi asogwini, namathafa avulekile. Kufanelekile kwabathanda umnyakazo nabathanda imvelo — wonke amazinga okhono ayamukelwa, kunokuqondiswa okuphelele kokuphepha kanye nezinsimbi ezihlinzekwayo."
   },
   "Tours": {
     "pageTitle": "Ohambo Nezipiliyensi",
@@ -154,6 +159,12 @@
       "tag": "Ingulule · Indlovu · Umfula · Ingwenya · I-Gin · Ubhiya",
       "shortDescription": "Imenyu ekhethiwe yohambo olwengeziwe lokwakha usuku lwakho olufanele eZululand.",
       "description": "Yakha usuku lwakho olufanele eZululand kusukela kumenyu yethu yohambo olukhethiwe: sondela engululeni ekuvakasheleni, jabulela ukuxhumana okungenakukhohlakala nezindlovu, phumula ekugibeleni isikebhe esihle emfuleni, mangale ngezilwane ezindala ohambweni lwepulazi lezingwenya, nambitha utshwala bendawo ohambweni lwendlu yokukhiqiza i-gin, noma ujabulele ukunambitha ubhiya. Hlanganisa ngendlela oyithandayo ukwakha usuku olwenzelwe wena — sicele isiphakamiso esenzelwe wena."
+    },
+    "homestead": {
+      "name": "Ukuhlala Ekhaya — Ukuzibandakanya Namasiko AmaZulu",
+      "tag": "Ukuhlala Kwesiko · Hluhluwe",
+      "shortDescription": "Ukuhlala kweqiniso ekhaya lesiZulu — yabelana ngokudla, izindaba nempilo yansuku zonke nomphakathi wendawo.",
+      "description": "Zwakalisa ubungani beqiniso besiZulu ngokuhlala ekhaya lendabuko. Zicwilise emasikweni acebile nasempilweni yansuku zonke yemiphakathi yesiZulu yendawo. Yabelana ngokudla, ulalele izindaba zokhokho emlilweni, ufunde ngobuciko bendabuko, futhi uxhumane nabantu abamnene baseZululand. Ukuxhumana kwesiko okungeke ukhohlwe okusekela imiphakathi yendawo futhi kugcine amagugu."
     }
   },
   "Pricing": {
@@ -270,7 +281,8 @@
     "errorService": "Sicela ukhethe inkonzo.",
     "errorDate": "Sicela unikeze usuku oluthandayo, noma ubhale \"Kuyaguquguquka\".",
     "errorPax": "Sicela ufake inani elisebenzayo lezivakashi (1–100).",
-    "whatsappAlternative": "Uthanda ukukhuluma ngokushesha? Xhumana nathi ngqo nge-WhatsApp."
+    "whatsappAlternative": "Uthanda ukukhuluma ngokushesha? Xhumana nathi ngqo nge-WhatsApp.",
+    "serviceHomestead": "Ukuhlala Ekhaya — Ukuzibandakanya Namasiko"
   },
   "Contact": {
     "pageTitle": "Qala Uhambo Lwakho LwaseZululand",
