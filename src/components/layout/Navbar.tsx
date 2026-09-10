@@ -39,60 +39,75 @@ export default function Navbar() {
   ];
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-[1000] transition-all duration-300
-        ${scrolled ? 'bg-earth/96 backdrop-blur-md shadow-lg py-3' : 'py-4'}`}
-    >
-      <div className="mx-auto flex max-w-content items-center gap-8 px-6">
-        <Link href="/" className="flex shrink-0 items-center" aria-label={`${business.shortName} – Home`}>
-          <Image
-            src="/images/logo/diza-logo-horizontal.png"
-            alt={`${business.legalName} logo`}
-            width={638}
-            height={382}
-            priority
-            className={`w-auto transition-all duration-300 ${scrolled ? 'h-70' : 'h-100'}`}
-            style={{ mixBlendMode: 'screen' }}
-          />
-        </Link>
+    <header className="fixed inset-x-0 top-0 z-[1000]">
+      {/*
+        SECURITY/LAYOUT NOTE: the scroll-dependent background + backdrop-blur
+        classes live on THIS inner wrapper, not on the outer <header>.
+        backdrop-filter (like transform) creates a new CSS containing block
+        for any `position: fixed` descendant. The mobile menu overlay below
+        is `fixed inset-0` and needs to stay anchored to the *viewport* at
+        all times — if backdrop-blur-md were on the header (their shared
+        ancestor), the menu would instead anchor to the header's own small
+        box once scrolled, making it render squashed near the top of the
+        screen instead of covering the viewport. Keeping blur/background on
+        this inner div (a sibling of the mobile menu, not an ancestor of it)
+        avoids that entirely.
+      */}
+      <div
+        className={`transition-all duration-300
+          ${scrolled ? 'bg-earth/96 backdrop-blur-md shadow-lg py-3' : 'py-4'}`}
+      >
+        <div className="mx-auto flex max-w-content items-center gap-8 px-6">
+          <Link href="/" className="flex shrink-0 items-center" aria-label={`${business.shortName} – Home`}>
+            <Image
+              src="/images/logo/diza-logo-horizontal.png"
+              alt={`${business.legalName} logo`}
+              width={638}
+              height={382}
+              priority
+              className={`w-auto transition-all duration-300 ${scrolled ? 'h-70' : 'h-100'}`}
+              style={{ mixBlendMode: 'screen' }}
+            />
+          </Link>
 
-        <nav className="ml-auto hidden items-center gap-1 md:flex" aria-label="Main navigation">
-          {NAV_LINKS.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className={`rounded-md px-3 py-1.5 font-ui text-sm font-medium 
-                          text-sand transition-all duration-200
-                          hover:text-ochre-light hover:bg-white/5
-                          ${pathname === l.href ? 'text-ochre-light font-semibold' : ''}`}
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
+          <nav className="ml-auto hidden items-center gap-1 md:flex" aria-label="Main navigation">
+            {NAV_LINKS.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={`rounded-md px-3 py-1.5 font-ui text-sm font-medium 
+                            text-sand transition-all duration-200
+                            hover:text-ochre-light hover:bg-white/5
+                            ${pathname === l.href ? 'text-ochre-light font-semibold' : ''}`}
+              >
+                {l.label}
+              </Link>
+            ))}
+          </nav>
 
-        <div className="hidden md:block">
-          <LocaleSwitcher />
+          <div className="hidden md:block">
+            <LocaleSwitcher />
+          </div>
+
+          <a
+            href={`tel:${business.contact.phonePrimary}`}
+            className="hidden shrink-0 items-center gap-1.5 rounded-full bg-ochre px-5
+                       py-2 font-ui text-sm font-semibold text-earth transition-colors
+                       hover:bg-ochre-light md:flex"
+          >
+            {t('bookNow')}
+          </a>
+
+          <button
+            type="button"
+            onClick={() => setOpen((o) => !o)}
+            aria-label={open ? t('closeMenu') : t('openMenu')}
+            aria-expanded={open}
+            className="ml-auto rounded-md p-2 text-sand md:hidden"
+          >
+            {open ? <XIcon /> : <MenuIcon />}
+          </button>
         </div>
-
-        <a
-          href={`tel:${business.contact.phonePrimary}`}
-          className="hidden shrink-0 items-center gap-1.5 rounded-full bg-ochre px-5
-                     py-2 font-ui text-sm font-semibold text-earth transition-colors
-                     hover:bg-ochre-light md:flex"
-        >
-          {t('bookNow')}
-        </a>
-
-        <button
-          type="button"
-          onClick={() => setOpen((o) => !o)}
-          aria-label={open ? t('closeMenu') : t('openMenu')}
-          aria-expanded={open}
-          className="ml-auto rounded-md p-2 text-sand md:hidden"
-        >
-          {open ? <XIcon /> : <MenuIcon />}
-        </button>
       </div>
 
       {/* Mobile Menu */}
