@@ -36,6 +36,13 @@ type FormState = {
   date: string;
   paxCount: string; // kept as string for controlled input, coerced by Zod
   message: string;
+  // Honeypot — real visitors never see or fill this field (see below).
+  // If it's non-empty on submit, we silently no-op instead of opening the
+  // mail client. This is a bot deterrent, not a security boundary: this
+  // form has no backend, so there's nothing a bot can attack server-side
+  // (no database writes, no rate-limitable endpoint, no CSRF-relevant
+  // state change) — see SECURITY_AUDIT.md §4 for the full explanation.
+  website: string;
 };
 
 const initialState: FormState = {
@@ -46,6 +53,7 @@ const initialState: FormState = {
   date: '',
   paxCount: '2',
   message: '',
+  website: '',
 };
 
 export default function BookingForm() {
@@ -75,6 +83,11 @@ export default function BookingForm() {
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
+    // Honeypot check — bots that blindly fill every field will trip this.
+    if (form.website.trim() !== '') {
+      return;
+    }
+
     const result = bookingFormSchema.safeParse(form);
 
     if (!result.success) {
@@ -92,18 +105,26 @@ export default function BookingForm() {
 
     const data = result.data;
 
+    // SECURITY: the Zod schema already strips CR/LF from name/email/date,
+    // but every field going into the mailto subject line gets a second,
+    // belt-and-braces strip here too, since the subject is the one place
+    // a raw newline could visually spoof extra "headers" in a user's mail
+    // client. encodeURIComponent() below also percent-encodes any
+    // remaining CR/LF, so this is defense-in-depth, not the only guard.
+    const singleLine = (s: string) => s.replace(/[\r\n]+/g, ' ').trim();
+
     // ── TODO (future): replace this block with a fetch() POST to an API
     // route once one exists, e.g.:
     //   await fetch('/api/booking', { method: 'POST', body: JSON.stringify(data) })
     // Keep the Zod-validated `data` object as the payload either way —
     // no other code needs to change.
-    const subject = `Booking Request: ${serviceLabels[data.serviceType]} — ${data.name}`;
+    const subject = singleLine(`Booking Request: ${serviceLabels[data.serviceType]} — ${data.name}`);
     const bodyLines = [
-      `Name: ${data.name}`,
-      `Email: ${data.email}`,
-      `Phone: ${data.phone}`,
+      `Name: ${singleLine(data.name)}`,
+      `Email: ${singleLine(data.email)}`,
+      `Phone: ${singleLine(data.phone)}`,
       `Service: ${serviceLabels[data.serviceType]}`,
-      `Preferred Date: ${data.date}`,
+      `Preferred Date: ${singleLine(data.date)}`,
       `Number of Guests: ${data.paxCount}`,
       '',
       `Message:`,
@@ -144,10 +165,27 @@ export default function BookingForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5 rounded-2xl bg-ivory p-8 shadow-md md:p-10">
+    <form onSubmit={handleSubmit} noValidate className="relative flex flex-col gap-5 rounded-2xl bg-ivory p-8 shadow-md md:p-10">
       <div>
         <h3 className="font-display text-2xl font-semibold text-earth">{t('title')}</h3>
         <p className="mt-1 text-sm text-text-muted">{t('subtitle')}</p>
+      </div>
+
+      {/* Honeypot field — hidden from sighted users and screen readers via
+          aria-hidden + tabIndex=-1, but present in the DOM for bots that
+          fill every input they find. Named "website" (a classic honeypot
+          bait name) rather than anything booking-related. */}
+      <div aria-hidden="true" className="absolute left-[-9999px] top-auto h-px w-px overflow-hidden">
+        <label htmlFor="website">Website</label>
+        <input
+          type="text"
+          id="website"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          value={form.website}
+          onChange={(e) => handleChange('website', e.target.value)}
+        />
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">

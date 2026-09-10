@@ -16,6 +16,20 @@ import { z } from 'zod';
 
 const phoneRegex = /^\+?[0-9\s\-()]{7,20}$/;
 
+/**
+ * SECURITY: strips CR/LF (and other control characters) from a string.
+ * Defense-in-depth against email header injection — this form currently
+ * builds a `mailto:` link (see BookingForm.tsx), so an attacker cannot
+ * actually inject SMTP headers from the browser today. But every field
+ * that will ever be interpolated into an email subject/header (name,
+ * email, service, date) is scrubbed here so this schema stays safe if/when
+ * it's reused by a real server-side mail-sending API route.
+ */
+function stripControlChars(value: string): string {
+  // eslint-disable-next-line no-control-regex
+  return value.replace(/[\r\n\x00-\x08\x0b\x0c\x0e-\x1f]/g, '').trim();
+}
+
 export const SERVICE_TYPES = [
   'game-drive',
   'shuttle-mozambique-iswatini',
@@ -33,15 +47,23 @@ export type ServiceType = (typeof SERVICE_TYPES)[number];
 export const bookingFormSchema = z.object({
   name: z
     .string()
-    .trim()
-    .min(2, { message: 'Please enter your full name (at least 2 characters).' })
-    .max(100),
+    .transform(stripControlChars)
+    .pipe(
+      z
+        .string()
+        .min(2, { message: 'Please enter your full name (at least 2 characters).' })
+        .max(100)
+    ),
 
   email: z
     .string()
-    .trim()
-    .min(1, { message: 'Email address is required.' })
-    .email({ message: 'Please enter a valid email address.' }),
+    .transform(stripControlChars)
+    .pipe(
+      z
+        .string()
+        .min(1, { message: 'Email address is required.' })
+        .email({ message: 'Please enter a valid email address.' })
+    ),
 
   phone: z
     .string()
@@ -55,8 +77,8 @@ export const bookingFormSchema = z.object({
 
   date: z
     .string()
-    .trim()
-    .min(1, { message: 'Please provide a preferred date, or write "Flexible".' }),
+    .transform(stripControlChars)
+    .pipe(z.string().min(1, { message: 'Please provide a preferred date, or write "Flexible".' })),
 
   paxCount: z
     .coerce
