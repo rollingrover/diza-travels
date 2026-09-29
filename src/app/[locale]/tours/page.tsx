@@ -29,7 +29,9 @@ export async function generateMetadata({
   languageAlternates['x-default'] = `${SITE_URL}/${locales[0]}/tours`;
 
   return {
-    title,
+    // See services/page.tsx for why this is `{ absolute: title }` rather
+    // than a plain string — `title` already ends in "| DIZA TRAVELS".
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `${SITE_URL}/${locale}/tours`,

@@ -33,7 +33,10 @@ export async function generateMetadata({
   languageAlternates['x-default'] = `${SITE_URL}/${locales[0]}/contact`;
 
   return {
-    title,
+    // See services/page.tsx for why `{ absolute: title }` is used here —
+    // `title` already contains "DIZA TRAVELS"; without this the layout
+    // template would still append a second "| DIZA TRAVELS" to the end.
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `${SITE_URL}/${locale}/contact`,

@@ -41,7 +41,13 @@ export async function generateMetadata({
   languageAlternates['x-default'] = `${SITE_URL}/${locales[0]}/services`;
 
   return {
-    title: t('pageMetaTitle'),
+    // NOTE: pageMetaTitle already contains "| DIZA TRAVELS" as translated
+    // copy (baked in for the required exact-match SEO phrasing). Using
+    // `{ absolute: ... }` here tells Next.js to use this string exactly
+    // as-is for the <title> tag, instead of also running it through the
+    // root layout's `%s | DIZA TRAVELS` template — which was previously
+    // producing "... | DIZA TRAVELS | DIZA TRAVELS" on every page load.
+    title: { absolute: t('pageMetaTitle') },
     description: t('pageMetaDescription'),
     alternates: {
       canonical: `${SITE_URL}/${locale}/services`,

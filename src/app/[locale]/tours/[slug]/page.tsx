@@ -48,7 +48,9 @@ export async function generateMetadata({
   languageAlternates['x-default'] = `${SITE_URL}/${locales[0]}/tours/${slug}`;
 
   return {
-    title,
+    // See services/page.tsx for why `{ absolute: title }` — `title`
+    // already ends in "| DIZA TRAVELS — Hluhluwe, Kwa-Smolo".
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `${SITE_URL}/${locale}/tours/${slug}`,
